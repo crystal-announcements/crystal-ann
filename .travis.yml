@@ -5,6 +5,8 @@ env:
   DATABASE_URL=postgres://postgres@localhost/$DATABASE_NAME
 
 language: crystal
+crystal:
+  - 0.23.1
 services: postgresql
 before_script:
   - psql -c "create database $DATABASE_NAME;" -U postgres
